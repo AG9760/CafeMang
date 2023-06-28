@@ -1,0 +1,76 @@
+*{
+    color: gray;
+  }
+  .container {
+    padding: 2rem 0rem;
+  }
+  .table{
+    margin-top: 50px;
+    margin-bottom: 200px;
+  }
+  h4 {
+    margin: 2rem 0rem 1rem;
+  }
+  
+  .table-image td,
+  .table-image th {
+    vertical-align: middle;
+  }
+  
+  tr:nth-child(even){
+    background-color: #f7f2f2;
+}
+        
+tr:nth-child(odd){
+    background-color: white;
+}
+  th,td{
+    text-align: center;
+    height: 60px;
+    }
+    th{
+      color: #b70505;
+    }
+  thead{
+    font-size: 20px;
+    background-color: #F8C44C;
+    color: white;
+    font-family: "Castoro Titling";
+    font-weight: bold;
+  }
+    td{
+      font-size: 17px;
+      color: grey;
+      font-family: "Ysabeau"
+    }
+  #delete{
+    cursor: pointer;
+    /* color: tomato; */
+    transition: 0.3s all ease-in-out;
+  }
+  
+  #delete:hover{
+    color: tomato;
+    transform: scale(1.3);
+  }
+  
+  .name , .email
+  {
+    cursor: pointer;
+  }
+  
+  
+  tr{
+    transition: all 300ms ease-in-out;
+  }
+  tr:hover{
+    background-color: #f1f1f1;
+  }
+  @media (max-width: 767px) {
+    h3{
+      font-size: 14px;
+    }
+    #container{
+      overflow-x: scroll;
+    }
+  }

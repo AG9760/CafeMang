@@ -1,0 +1,60 @@
+<app-user-nav></app-user-nav>
+<div></div>
+
+    <div class="container" id="container">
+
+      <div class="row">
+        <div class="col-12">
+
+          <table  class="table table-image table-border">
+            <thead>
+                <tr>
+                    <th scope="col">Order Id</th>
+                    <th scope="col">Total price</th>
+                    <th scope="col">Date and Time</th>
+                    <th scope="col">Make Payment</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let item of myOrders;">
+                <tr >
+                  <td>{{ item._id}}</td>
+                  <td>{{item.totalprice}} ₹</td>
+                  <td>{{item.createdAt}} </td>
+                  <td>
+                    <button class="btn btn-link"><i class="fa fa-credit-card" aria-hidden="true"></i>
+                    </button>
+                  </td>
+  
+                 <tr>
+                    <td colspan="4">
+                        <table class="table mb-0">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th scope="col">Foodname</th>
+                <th scope="col">Foodprice</th>
+                <th scope="col">Selected Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody *ngFor="let data of item.items;index as i">
+                                <tr>
+                                  <th scope="row">{{i+1}}</th>
+                                  <td>
+                                    {{data.foodname}}
+                                  </td>
+                                  <td>
+                                    {{data.foodprice}}
+                                  </td>
+                                  <td>{{data.Selectedqty}} </td>
+                                </tr>
+                            </tbody>
+                            <br />                    
+                        </table>
+                    </td>
+                </tr>                
+            </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+

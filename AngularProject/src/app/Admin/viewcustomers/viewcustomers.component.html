@@ -1,0 +1,39 @@
+<app-admin-nav></app-admin-nav>
+<div></div>
+
+
+  <div class="container" id="container">
+    <div class="row">
+      <div class="col-12">
+        <table class="table table-image">
+          <thead>
+            <!-- <tr> -->
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">contact</th>
+              <!-- <th scope="col">Add Quantity</th> -->
+              <th scope="col">Block User</th>
+              <th scope="col">Unblock User</th>
+            <!-- </tr> -->
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users;index as i">
+              <td scope="row">{{i+1}}</td>
+              <td>{{user.name}}</td>
+              <td>{{user.email}}</td>
+              <td>{{user.contact}}</td>
+              <td>
+                <button class="btn btn-link" ><i class="fa fa-ban" aria-hidden="true"></i>
+                </button>
+              </td>
+              <td>
+                <button class="btn btn-link" ><i class="fa fa-unlock-alt" aria-hidden="true"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+

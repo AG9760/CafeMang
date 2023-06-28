@@ -1,0 +1,60 @@
+<app-admin-nav></app-admin-nav>
+<!-- <ng-template> -->
+  <div class="container" id="container">
+    <div class="row">
+      <div class="col-12">
+        <table class="table table-image">
+          <thead>
+            <!-- <tr>  -->
+              <th scope="col">#</th>
+              <!-- <th scope="col">Item Image</th> -->
+              <th scope="col">Item Name</th>
+              <th scope="col">Item Price</th>
+              <th scope="col">Add Quantity</th>
+              <th scope="col">Selected Quantity</th>
+              <th scope="col">Edit Item</th>
+              <th scope="col">Delete Item</th>
+            <!-- </tr> -->
+          </thead>
+          <tbody>
+
+            <tr *ngFor="let food of Fooditems; index as i">
+              <td scope="row">{{i+1}}</td>
+              <!-- <td class="w-25">
+                <img src="{{item.foodimage}}" class="img-fluid img-thumbnail" alt="No image found">
+              </td> -->
+              <td>{{food.foodname}}</td>
+              <td>{{food.foodprice}}</td>
+              <td>{{food.foodqty}}</td>
+              <td>{{food.Selectedqty}}</td>
+              <!-- <td>
+                <div *ngIf="item.foodavail; else myelseBlock" style="color: green;">
+                  Available
+                </div>
+
+                <ng-template #myelseBlock>
+                  <div style="color: tomato;">
+                    Not Available
+                  </div>
+                </ng-template>
+                
+              </td> -->
+              <!-- <td>
+
+                <i class="fa fa-plus" id="plus" *ngIf="!item.unlimited; else elseBlock" (click)="addfooditem(item)"
+                  aria-hidden="true"></i>
+                <ng-template #elseBlock>
+                  unlimited
+                </ng-template>
+              </td> -->
+              <td><i class="fa fa-edit" id="edit"  aria-hidden="true" routerLink="/admin/editfood/{{food._id}}" (click)="onEdit(food)"></i></td>
+              <td><i class="fa fa-trash" id="delete" aria-hidden="true" (click)="onDelete(food._id,food)"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+<!-- </ng-template> -->

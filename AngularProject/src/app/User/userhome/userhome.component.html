@@ -1,0 +1,62 @@
+<app-user-nav></app-user-nav>
+<div></div>
+
+
+  <!-- <main> -->
+  <section class="cards">
+
+
+
+    <!-- <div > -->
+    
+
+    <div class="crd" *ngFor="let food of Fooditems;index as i">
+      <div class="wrapper">
+        <div class="containerr">
+          
+          <div class="top"><img src="assets/1.jpg" alt="No image found"></div>
+          <div class="bottom">
+            <div class="left">
+              <div class="details">
+                <h3>{{food.foodname}}</h3>
+                <p>{{food.foodprice}}₹</p>
+                <div class="content">
+                  <button type="button" class="btn">
+                      <i class="fa fa-plus" (click)="inc(food)"></i>
+                  </button>
+                  <span>{{food.Selectedqty}}</span>
+                  <button type="button"class="btn">
+                      <i class="fa fa-minus" (click)="dec(food)"></i>
+                  </button>
+              </div>
+              </div>
+              
+              
+              <div *ngIf="food.foodqty">
+                <div class="buy"><i class="fa fa-cart-plus" aria-hidden="true" (click)="addtocart(food)"></i></div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="inside">
+          <div class="icon"><i class="fa fa-info-circle" aria-hidden="true"></i></div>
+          <div class="contents">
+          
+            <h2>FoodZone</h2>
+            <h3>item name - {{food.foodname}}</h3>
+            <h3> price - {{food.foodprice}}₹</h3>
+            <!-- <h3 *ngIf="!item.unlimited"> -->
+              <h3>Available Quantity - {{food.foodqty}}</h3>
+  
+            <!-- </h3> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- </div> -->
+
+  </section>
+
+

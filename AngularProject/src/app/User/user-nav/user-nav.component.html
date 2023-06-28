@@ -1,0 +1,28 @@
+<nav class="navbar  navbar-expand-lg">
+    <a [routerLink]="['/userhome']" class="navbar-brand">
+      <img src="assets/logo.png" height="30" alt="CoolBrand"
+        style="margin-left: 10px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      style="color: white;outline: none;" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "><i class="fa fa-bars" style="color:#F8C44C; font-size:28px;"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a [routerLink]="['/user/userhome']" routerLinkActive="active" class="nav-link">Home</a></li>
+        <li class="nav-item"><a [routerLink]="['/user/myprofile']" routerLinkActive="active" class="nav-link">Myprofile</a></li>
+        <li class="nav-item"><a [routerLink]="['/user/myorders']" routerLinkActive="active" class="nav-link">Myorders</a></li>
+        <li class="nav-item"><a [routerLink]="['/user/feedback']" routerLinkActive="active" class="nav-link">Send Feeback</a></li>
+        <li class="nav-item"><a [routerLink]="['/']" class="nav-link"  (click)="logoutuser()">Logout</a></li>
+      </ul>
+      <a [routerLink]="['/user/cart']" routerLinkActive="active" class="notification">
+        <i class="fa fa-shopping-cart" id="ct"></i>
+  
+      </a>
+    </div>
+  </nav>
+  <div class="float-right">
+    <i class="fa fa-arrow-up " onclick="topFunction()" id="mybtn" style="cursor: pointer;"></i>
+  </div>
+  
