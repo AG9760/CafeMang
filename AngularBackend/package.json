@@ -2,7 +2,7 @@
   "name": "angularbackend",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "build":"npm run build",
     "start": "node server.js",
